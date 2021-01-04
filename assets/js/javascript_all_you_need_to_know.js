@@ -947,3 +947,33 @@ console.log(str)
 //  return arr[indexNumber] + sumOfArray(arr, indexNumber - 1)
 // }
 // console.log(sumOfArray(arr, arr.length - 1))
+
+// how to use currying function
+// Example ==>
+// sample function use
+// function hello(a, b, c) {
+//  return a + b + c
+// }
+// console.log(hello(1,2,3)) //6
+
+// currying use
+// function myCurrying(a) {
+//  return function(b){
+//      return function(c){
+//          return a + b + c
+//      }
+//  }
+// }
+// console.log(myCurrying(1)(2)(3))
+
+// how to use composition function
+// function input(result){
+//  return result
+// }
+// function ento(n){
+//  return n * 10
+// }
+// function sum(a, b) {
+//  return a + b
+// }
+// console.log(input(ento(sum(1,2))))
