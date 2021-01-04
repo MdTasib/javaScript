@@ -818,3 +818,94 @@ console.log(str)
 // 	return value === 5
 // })
 // console.log(result)
+
+// how to use sort function
+// var arr = [1, 8, 5, 2, 4, 3, 9, 7]
+// arr.sort()
+// console.log(arr)
+
+// var arr = [-3, -1, 1, -2, 8, 5, 2, 4, 3, 9, 7]
+// arr.sort()
+// console.log(arr) // [-1, -2, -3, 1, 2, 3, 4, 5, 7, 8, 9] it's wrong
+
+// var arr = [-3, -1, 1, -2, 8, 5, 2, 4, 3, 9, 7]
+
+// arr.sort(function (a, b) {
+// 	if (a > b) {
+// 		return 1
+// 	} else if (a < b) {
+// 		return -1
+// 	} else {
+// 		return 0
+// 	}
+// })
+// console.log(arr) //[-3, -2, -1, 1, 2, 3, 4, 5, 7, 8, 9] it's right answer
+
+// // same that
+// var persons = [
+// 	{
+// 		name: 'A',
+// 		age: 30,
+// 	},
+// 	{
+// 		name: 'B',
+// 		age: 20,
+// 	},
+// 	{
+// 		name: 'C',
+// 		age: 40,
+// 	},
+// 	{
+// 		name: 'D',
+// 		age: 10,
+// 	},
+// ]
+
+// persons.sort(function (a, b) {
+// 	if (a.age > b.age) {
+// 		return 1
+// 	} else if (a.age < b.age) {
+// 		return -1
+// 	} else {
+// 		return 0
+// 	}
+// })
+// console.log(persons)
+
+// how to use every function
+// jodi kono negative number take print korbe false, onnotai ture
+// var arr = [1, 2, 3, 4, 6, 8, 5, 4] //var arr = [1,2,3,4,6,8,5,4,-1]
+
+// var resOne = arr.every(function (value) {
+// 	return value % 2 === 0 // false
+// })
+// console.log(resOne)
+
+// var resTwo = arr.every(function (value) {
+// 	return value >= 0
+// })
+// console.log(resTwo)
+
+//how to use some function
+// var arr = [1, 2, 3, 4, 5, 6, 7, 1]
+// var resThree = arr.some(function (value) {
+// 	return value % 2 === 0
+// })
+// console.log(resThree)
+// var resFour = arr.some(function (value) {
+// 	return value < 0
+// })
+// console.log(resFour)
+
+// how to return a function from another function
+// function base(b) {
+// 	return function (n) {
+// 		var result = 1
+// 		for (var i = 0; i < b; i++) {
+// 			result *= n
+// 		}
+// 		return result
+// 	}
+// }
+// var base2 = base(2)
+// console.log(base2(3)) // 3*3
