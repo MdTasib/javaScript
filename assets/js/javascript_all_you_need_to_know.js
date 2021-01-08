@@ -995,3 +995,57 @@ console.log(str)
 //      }, 1000 * n)
 //  })(i)
 // }
+
+// // es6 find function
+// // use normal way
+// var number = [1, 2, 3, 4, 5, 6, 7]
+
+// var result = number.find(function(value) {
+//  return value > 3;
+// }, this)
+
+// console.log(number)
+// console.log(result)
+
+// // use es6 way
+
+// var number = [1, 2, 3, 4, 5, 6, 7]
+
+// var result = number.find((value) => {
+//  return value > 3
+// })
+// console.log(number)
+// console.log(result)
+
+
+// use findIndex function
+//ues es6 way
+// var number = [1, 2, 3, 4, 5, 6, 7]
+
+// var result = number.findIndex((value) => {
+//  return value > 3
+//  // return value > 22 // jodi value ta na take -1 print korbe..
+// })
+
+// console.log(result)
+
+// // this is normal way
+// var number = [1, 2, 3, 4, 5, 6, 7]
+
+// var result = number.findIndex(function(value) {
+//  return value > 3
+//  // return value > 22 // jodi value ta na take -1 print korbe..
+// })
+
+// console.log(result)
+
+
+// how to use filter function in es6
+
+// var number = [1, 2, 3, 4, 5, 6, 7]
+
+// var result = number.filter((value, index, array) => {
+//  return value > 5
+// })
+
+// console.log(result)
