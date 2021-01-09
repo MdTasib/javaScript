@@ -1049,3 +1049,74 @@ console.log(str)
 // })
 
 // console.log(result)
+
+// // how to use map function in es6
+// var number = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+// var result = number.map((value) => {
+//  return value * 2
+// })
+
+// console.log(result)
+// console.log(number)
+
+// // how to use for loop, for in, for of
+// // first way
+// for (var i = 1; i <= 5; i++) {
+// 	console.log(i)
+// }
+
+// // second way
+// var i = 1;
+// for (; ; i++) {
+// 	if (i <= 5) {
+// 		console.log(i)
+// 	} else {
+// 		break
+// 	}
+// }
+
+// // for in --> object a only in use kora jai, of use kora jaina.
+// var obj = {
+// 	name: 'Ohidul alam',
+// 	age: 19,
+// 	country: 'Bangladesh'
+// }
+
+// for (property in obj) {
+// 	console.log(property)
+// }
+
+// // how to use for of // string er moddeo use kora jai
+// var array = [1, 2, 3, 4, 5, 6, 7, 8]
+// for (element of array) { // of use korle element, in use korle index print korbe
+// 	console.log(element)
+// }
+
+// // how to easly useing object keys, value print
+// var obj = {
+// 	name: 'Ohidul alam',
+// 	age: 19,
+// 	country: 'Bangladesh'
+// }
+
+// var keys = Object.keys(obj)
+// var value = Object.values(obj)
+// var entries = Object.entries(obj)
+// console.log(keys)
+// console.log(value)
+// console.log(entries)
+
+// // shortHand useing object
+// var x = 4
+// var y = 4
+// var z = x * y
+
+// var obj = {
+// 	x,
+// 	y,
+// 	z
+// }
+// console.log(Object.keys(obj))
+// console.log(Object.values(obj))
+// console.log(obj)
