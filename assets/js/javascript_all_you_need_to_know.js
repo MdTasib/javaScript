@@ -1017,7 +1017,6 @@ console.log(str)
 // console.log(number)
 // console.log(result)
 
-
 // use findIndex function
 //ues es6 way
 // var number = [1, 2, 3, 4, 5, 6, 7]
@@ -1038,7 +1037,6 @@ console.log(str)
 // })
 
 // console.log(result)
-
 
 // how to use filter function in es6
 
@@ -1120,3 +1118,97 @@ console.log(str)
 // console.log(Object.keys(obj))
 // console.log(Object.values(obj))
 // console.log(obj)
+
+// // how to use Destructuring
+// // Object Destructuring
+// // object a use korar somoi
+// var user = {
+//     name: 'Tasib',
+//     age: 18,
+//     country: 'Bangladesh'
+// }
+
+// //obj teke name take onno varialbe a assign korte sai, jene onno jaigai use korte pari
+
+// var { name } = user;
+// console.log(name)
+
+// // jodi veriable er name change korte sai tahole
+// var { name: varName } = user;
+// console.log(varName)
+
+// nested object user korar somoi
+// var user = {
+//     name: 'Tasib',
+//     age: 18,
+//     country: 'Bangladesh',
+//     education: {
+//         degree: 'HSC'
+//     }
+// }
+
+// var { education: { degree } } = user;
+// console.log(degree)
+
+// var { education: { degree: varName } } = user;
+// console.log(varName)
+
+// //array Destructuring
+// var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+// // 4 and 7 dorkar. (,) atar mane holo skip kora
+// var [, , , a, , , b, , ,] = numbers;
+// console.log(a, b)
+
+// // nested array hoile
+// var numbers = [1, 2, [300, 400, 500], 6, 7, 8, 9]
+// // 300, 500 print korbe
+// var [, , [a, , b], , , , ,] = numbers;
+// console.log(a, b)
+
+// a er value b te jabe, b er value a te asbe. Distructuring use kore
+// var a = 1;
+// var b = 2;
+
+// // old way
+// var temp = a;
+// a = b
+// b = temp;
+// console.log(a, b)
+
+// // new way
+// [b, a] = [a, b]
+// console.log(a, b)
+
+// // how to use set in es6
+// // set methods
+// var myArray = new Array();
+// var mySet = new Set();
+
+// // mySet.add(4);
+// // mySet.add('Bangladesh');
+
+// // mySet.add(2).add(4).add(5).add('bangladesh').delete(2);
+// // mySet.add(2).add(4).add(5).add('bangladesh').clear();
+
+// mySet.add(2).add(4).add(5).add('bangladesh');
+// console.log(mySet.size);
+// console.log(mySet);
+
+// // how to use set from array
+// // convert array to set
+// var arr = [1, 2, 3, 4, 5];
+// var mySet = new Set(arr);
+
+// console.log(arr);
+// console.log(mySet);
+
+// // how to use array from set
+// // convert set to array
+// var arr = [1, 2, 3, 4, 5];
+// var mySet = new Set(arr);
+
+// console.log([...mySet]); // first way
+// // console.log(Array.from(mySet)); // second way
+// console.log(arr);
+// console.log(mySet);
