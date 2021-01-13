@@ -1212,3 +1212,88 @@ console.log(str)
 // // console.log(Array.from(mySet)); // second way
 // console.log(arr);
 // console.log(mySet);
+
+
+// // why use factory fattern and Construntor pattern
+// // 2 bar code golo likte hosse
+// var rect1 = {
+//     width: 22,
+//     height: 33,
+
+//     draw: function () {
+//         console.log('hello world')
+//         this.printProperties()
+//     },
+
+//     printProperties: function () {
+//         console.log('width is : ' + this.width)
+//         console.log('height is : ' + this.height)
+//     }
+// }
+
+// console.log(rect1.printProperties())
+
+// var rect2 = {
+//     width: 2233,
+//     height: 3322,
+
+//     draw: function () {
+//         console.log('hello world')
+//         this.printProperties()
+//     },
+
+//     printProperties: function () {
+//         console.log('width is : ' + this.width)
+//         console.log('height is : ' + this.height)
+//     }
+// }
+
+// console.log(rect2.printProperties())
+
+// // factory pattern vs Constructor pattern
+// // factory pattern
+// var createRect = function (w, h) {
+//     return {
+//         width: w,
+//         height: h,
+
+//         draw: function () {
+//             console.log('Hello Everyone');
+//             this.printProperties()
+//         },
+
+//         printProperties: function () {
+//             console.log('My width : ' + this.width)
+//             console.log('My height : ' + this.height)
+//         }
+//     }
+// }
+
+// var rect1 = createRect(10, 20)
+// console.log(rect1.draw())
+
+// var rect2 = createRect(33, 44)
+// console.log(rect2.draw())
+
+// // Constructor pattern
+
+// var Constructor = function (w, h) {
+//     this.width = w
+//     this.height = h
+
+//     this.draw = function () {
+//         console.log('Hello world')
+//         this.printProperties()
+//     }
+
+//     this.printProperties = function () {
+//         console.log('Width is : ' + this.width)
+//         console.log('Height is : ' + this.height)
+//     }
+// }
+
+// var hello1 = new Constructor(10, 20) // new ai key ta use kortei hobe
+// console.log(hello1.draw())
+
+// var hello2 = new Constructor(444, 222)
+// console.log(hello2.draw())
