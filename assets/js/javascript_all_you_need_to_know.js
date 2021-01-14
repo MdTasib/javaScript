@@ -1297,3 +1297,27 @@ console.log(str)
 
 // var hello2 = new Constructor(444, 222)
 // console.log(hello2.draw())
+
+// // call vs apply methods
+// // first example
+// function hey() {
+//     console.log(this)
+//     console.log(this.a, this.b)
+// }
+// hey.call({ a: 3, b: 3 }) // mast {} dite hobe
+// hey.apply({ a: 4, b: 4 })
+
+// // second example
+// function myFunc(c, d) {
+//     console.log(this)
+//     console.log(this.a + this.b + c + d)
+// }
+// myFunc.call({ a: 4, b: 4 }, 4, 3)
+// myFunc.apply({ a: 444, b: 444 }, [4, 3]) // mast [] dia c, d er value golo dite hobe
+
+// // bind method
+// function abc(c, d) {
+//     console.log(this.a + this.b + c + d)
+// }
+// var test = abc.bind({ a: 5, b: 5 })
+// test(5, 5)
