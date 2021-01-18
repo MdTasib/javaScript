@@ -1332,3 +1332,21 @@ console.log(str)
 // var test = abc.bind({ a: 5, b: 5 })
 // test(5, 5)
 
+// // how to use Class.. construntor function
+// class Person {
+//     constructor(name, age) {
+//         this.name = name;
+//         this.age = age;
+//     }
+
+//     eat() {
+//         console.log(`I eat rice`);
+//     }
+//     play() {
+//         console.log(`I play football`);
+//     }
+// }
+
+// const tasib = new Person('tasib', 19)
+// tasib.play()
+// console.log(tasib)
