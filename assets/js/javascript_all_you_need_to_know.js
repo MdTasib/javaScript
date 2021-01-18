@@ -9,7 +9,7 @@
 **	Exponentiation (ES2016)
 /	Division
 %	Modulus (Division Remainder)
-++	Increment
+++	Increment8
 --	Decrement
 
 // Assignment Operators
@@ -470,6 +470,18 @@ console.log(str)
 // console.log(obj)
 // console.log(objTwo)
 
+// // how to Work Object.create method
+// const captain = {
+//     name: "Mashrafi",
+//     age: 36,
+//     country: "Bangladesh",
+// };
+
+// const player = Object.create(captain);
+// console.log(player) // {}
+// console.log(player.name) // Mashrafi
+
+
 // // ********** Function ********** // //
 // function hey() {
 //     console.log('Hey! Do you free to day?')
@@ -648,8 +660,6 @@ console.log(str)
 // 	return i * j;
 // });
 // console.log(outputThree);
-
-/** @format */
 
 // forEach function
 // var arr = [1, 2, 3, 4, 5];
@@ -1321,3 +1331,4 @@ console.log(str)
 // }
 // var test = abc.bind({ a: 5, b: 5 })
 // test(5, 5)
+
