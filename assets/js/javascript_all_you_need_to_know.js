@@ -927,7 +927,7 @@ console.log(str)
 //      return
 //  }
 //  console.log("Hello World")
-//  sayHi(n - 1)// importent--> every time 1 kore mainas korte kore, onnotai infinity hoa jabe// nirdisto function a first time call kortei hobe
+//  sayHi(n - 1)// importent--> every time 1 kore mainas korte hobe, onnotai infinity hoa jabe// nirdisto function a first time call kortei hobe
 // }
 // sayHi(10)
 
@@ -1350,3 +1350,132 @@ console.log(str)
 // const tasib = new Person('tasib', 19)
 // tasib.play()
 // console.log(tasib)
+
+/*
+// how to use fibonacci function
+// fibonacci useing for loop
+function fibonacci(n) {
+    var arr = [0, 1];
+    for (var i = 2; i <= n; i++) {
+        arr[i] = arr[i - 1] + arr[i - 2];
+    }
+    return arr;
+}
+var result = fibonacci(10);
+console.log(result)
+
+// fibonacci useing while loop
+function fibonacci(n) {
+    var arr = [0, 1];
+    var i = 2;
+    while (i <= n) {
+        arr[i] = arr[i - 1] + arr[i - 2]
+        i++
+    }
+    return arr;
+}
+var result = fibonacci(10)
+console.log(result)
+*/
+
+// // construntor function
+// // first way
+// function Person(name, age) {
+//     this.name = name;
+//     this.age = age;
+
+//     this.eat = function () {
+//         console.log(`${this.name} is eating`)
+//     }
+// }
+
+
+// const tasib = new Person('Tasib', 18);
+// console.log(tasib)
+// const rafi = new Person('rafi', 18);
+// console.log(rafi)
+
+// // // second way
+// // function Person(name, age) {
+// //     this.name = name;
+// //     this.age = age;
+// // }
+
+// // Person.prototype = {
+// //     eat: function () {
+// //         console.log(`${this.name} is eating`)
+// //     }
+// // }
+
+// // const tasib = new Person('Tasib', 18);
+// // console.log(tasib)
+// // const rafi = new Person('rafi', 18);
+// // console.log(rafi)
+
+//***********  prototype inheritance vs class conversion  ************//
+
+
+/* // prototype inheritance
+
+function Person(name, age) { //parent class
+    this.name = name;
+    this.age = age;
+}
+
+function Cricketer(name, age, type, country) { // sub class
+    Person.call(this) // 1st work --> concat person
+    this.name = name;
+    this.age = age;
+    this.type = type;
+    this.country = country;
+}
+
+Person.prototype = {
+    eat: function () {
+        console.log(`${this.name} is eating.`);
+    }
+}
+
+Cricketer.prototype = Object.create(Person.prototype); // 2ed work --> concat prototype
+Cricketer.prototype.constructor = Cricketer; // 3rd work
+Cricketer.prototype.play = function () {
+    console.log(`${this.name} is playing`);
+}
+
+let tasib = new Cricketer('Tasib', 19, 'All rounder', 'Bangladesh');
+tasib.play();
+
+*/
+// same work using Class 
+
+/*
+// Class conversion
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    eat() {
+        console.log(`${this.name} is eating.`)
+    }
+}
+
+class Cricketer extends Person { // 2ed work --> concat prototype
+    constructor(name, age, type, country) {
+        super(name, age); //1st work --> concat person
+        this.name = name;
+        this.age = age;
+        this.type = type;
+        this.country = country;
+    }
+    play() {
+        console.log(`${this.name} is playing.`)
+    }
+}
+
+var tasib = new Cricketer('tasib', 19, 'all rounder', 'bangladesh');
+console.log(tasib.play())
+
+var rafi = new Person('rafi', 23, 'ballwer', 'bangladesh');
+console.log(rafi.play())
+*/
