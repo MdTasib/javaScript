@@ -1479,3 +1479,43 @@ console.log(tasib.play())
 var rafi = new Person('rafi', 23, 'ballwer', 'bangladesh');
 console.log(rafi.play())
 */
+
+// // Inheritance and Composition Mixing in Javascript
+// // create somethis object
+// const canWalk = {
+//     walk: function () {
+//         console.log(`walking...`)
+//     }
+// }
+// const canEat = {
+//     eat: function () {
+//         console.log(`eating...`)
+//     }
+// }
+// const canSwim = {
+//     swim: function () {
+//         console.log(`swiming...`)
+//     }
+// }
+
+// // constructor function
+// function Person(name) {
+//     this.name = name;
+// }
+// function Fish(name) {
+//     this.name = name;
+// }
+
+// // create mixin function
+// function mixin(target, ...sources) {
+//     Object.assign(target, ...sources);
+// }
+// // Object.assign(Person.prototype, canEat, canWalk)
+// mixin(Person.prototype, canEat, canWalk);
+// const person = new Person('tasib');
+// console.log(person)
+
+// // Object.assign(Fish.prototype, canEat, canSwim);
+// mixin(Fish.prototype, canEat, canSwim);
+// const fish = new Fish('katla');
+// console.log(fish)
