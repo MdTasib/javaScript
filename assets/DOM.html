@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manupulation in Javascript</title>
+</head>
+<style>
+    button {
+        background: #0d9e00;
+        padding: 10px 20px;
+        color: #fff;
+        border: 0;
+        border-radius: 5px;
+    }
+
+    #box {
+        width: 300px;
+        height: 200px;
+        background: #04ce26;
+        color: #fff;
+    }
+</style>
+
+<body>
+
+
+    <div class="container">
+        <ul id="my-list">
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+            <li>Four</li>
+        </ul>
+        <button id="btn">ADD ME</button>
+        <div id="box">
+            <p>( <span id="x-value">0</span>, <span id="y-value">0</span> )</p>
+        </div>
+
+        <div class="form-group">
+            <label for="name">Enter Your Name : </label>
+            <input type="text" class="form-control" id="name" placeholder="Your Name">
+
+            <p id="inputText"></p>
+        </div>
+    </div>
+
+
+
+    <script>
+        const list = document.getElementById('my-list');
+
+        document.getElementById('btn').addEventListener('click', function (e) {
+            let item = list.lastElementChild.cloneNode(true);
+            item.innerHTML = 'New Item';
+            list.appendChild(item);
+        });
+
+
+        let name = document.getElementById('name');
+        name.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                document.getElementById('inputText').innerHTML = `Your Name : ${e.target.value}`
+                e.target.value = '';
+            }
+        })
+
+
+        list.addEventListener('click', function (e) {
+            if (this.contains(e.target)) {
+                e.target.remove();
+            }
+        })
+
+        let box = document.getElementById('box');
+        box.addEventListener('mousemove', function (e) {
+            document.getElementById('x-value').innerHTML = e.offsetX;
+            document.getElementById('y-value').innerHTML = e.offsetY;
+        })
+    </script>
+</body>
+
+</html>
