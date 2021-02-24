@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX GET Request in Javascript</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+
+    <div class="btn btn-success my-5" id="load">GET DATA</div>
+    <ul id="posts" class="list-group"></ul>
+
+
+
+
+    <script>
+        let load = document.getElementById('load');
+        let postItem = document.getElementById('posts');
+        const url = 'https://jsonplaceholder.typicode.com/posts';
+
+        load.addEventListener('click', function () {
+            fetch(url)
+                .then(response => response.json())
+                .then(posts => {
+                    posts.forEach((post, id) => {
+                        let listItem = listItemGenerator(post, id + 1);
+                        postItem.appendChild(listItem);
+                    })
+                })
+                .catch((error) => { console.log(error.message) })
+        })
+
+        function listItemGenerator(item, number) {
+            let li = document.createElement('li');
+            li.classList = 'list-group-item';
+            li.innerHTML = `${number}. ${item.title}`
+            return li;
+        }
+
+
+
+    </script>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
