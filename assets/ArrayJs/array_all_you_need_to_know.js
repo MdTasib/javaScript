@@ -112,3 +112,24 @@ console.log('splice : ', arrs1);
 arrs1.splice(3, 0, 4);
 console.log('splice : ', arrs1);
 */
+
+/*
+// Array of Object
+// Update Existing Elements
+const students = [
+    { id: 1, name: 'Tasib' },
+    { id: 2, name: 'Rakib' },
+    { id: 3, name: 'Rafi' },
+    { id: 4, name: 'Tawrat' }
+]
+
+const givenID = 3;
+const givenName = 'Shajalal Rafi';
+for (let i = 0; i < students.length; i++) {
+    if (givenID === students[i].id) {
+        students[i].name = givenName;
+        break;
+    }
+}
+console.log(students);
+*/
