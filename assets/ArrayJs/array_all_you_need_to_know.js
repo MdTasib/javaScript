@@ -77,3 +77,38 @@ for (let i = 0; i < pointTable.length; i++) {
     }
 }
 */
+
+/*
+// use push to insert at the end
+const arrp1 = [1, 2, 3];
+
+arrp1[arrp1.length] = 4;
+arrp1.push(5);
+arrp1.push(6, 7);
+console.log(arrp1);
+
+const arrp2 = [8, 9];
+// (1)
+// arrp1.push(arrp2);
+// console.log(arrp1);
+
+// (2)
+Array.prototype.push.apply(arrp1, arrp2);
+console.log(arrp1);
+
+// (3) (es6)
+// arrp1.push(...arrp2);
+// console.log(arrp1);
+
+// use unshift to insert at the beginning
+const arru1 = [4, 5, 6];
+
+arru1.unshift(3);
+console.log('unshift : ', arru1);
+
+// use splice to insert at the given index
+const arrs1 = [1, 2, 3, 5, 6];
+console.log('splice : ', arrs1);
+arrs1.splice(3, 0, 4);
+console.log('splice : ', arrs1);
+*/
