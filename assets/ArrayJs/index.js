@@ -1,3 +1,4 @@
+
 // Implement A Basic Stack
 const MAX_SIZE = 30;
 class Stack {
@@ -15,7 +16,14 @@ class Stack {
         return true;
     }
     pop() {
-
+        if (this.isEmpty()) {
+            console.log('Stack Underflow')
+            return false;
+        }
+        let item = this.list[this.top];
+        delete this.list[this.top];
+        this.top--;
+        return item;
     }
     peek() {
         if (this.isEmpty()) {
