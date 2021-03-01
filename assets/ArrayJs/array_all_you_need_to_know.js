@@ -209,3 +209,16 @@ class Stack {
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 numbers.forEach((number, index) => console.log('index number : ', index, 'value : ', number));
 */
+/*
+// Map Method in Array
+let allPerson = [
+    { id: 1, name: 'Tasib', age: 19, profession: 'Programmar' },
+    { id: 2, name: 'Rafi', age: 21, profession: 'Programmar' },
+    { id: 3, name: 'Rakib', age: 18, profession: 'student' },
+]
+
+allPerson.map(person => {
+    console.log(person.name);
+    console.log(person.age);
+});
+*/
