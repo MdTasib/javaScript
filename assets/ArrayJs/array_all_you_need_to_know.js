@@ -209,6 +209,7 @@ class Stack {
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 numbers.forEach((number, index) => console.log('index number : ', index, 'value : ', number));
 */
+
 /*
 // Map Method in Array
 let allPerson = [
@@ -221,4 +222,55 @@ allPerson.map(person => {
     console.log(person.name);
     console.log(person.age);
 });
+
+// filter Method in Array
+let allPerson = [
+    { id: 1, name: 'Tasib', age: 19, profession: 'Programmar' },
+    { id: 2, name: 'Rafi', age: 21, profession: 'Programmar' },
+    { id: 3, name: 'Rakib', age: 17, profession: 'student' },
+    { id: 3, name: 'Tawrat', age: 10, profession: 'student' },
+    { id: 3, name: 'Tanha', age: 23, profession: 'House wife' },
+]
+
+const person = allPerson.filter(men => men.age > 20);
+console.table(person)
+
+// Map vs Filter in Array
+const students = [
+    { id: 1, name: 'tasib', age: 19, roll: 16 },
+    { id: 2, name: 'rafi', age: 18, roll: 11 },
+    { id: 3, name: 'rakib', age: 17, roll: 12 },
+    { id: 4, name: 'tawrat', age: 15, roll: 13 },
+    { id: 5, name: 'tabassom', age: 14, roll: 17 },
+    { id: 6, name: 'homaira', age: 11, roll: 18 },
+]
+
+const passed = students.filter(student => student.roll < 15);
+const selectStudent = passed.map(value => {
+    return {
+        ...value,
+        message: 'Your are passed'
+    }
+})
+console.table(students);
+console.table(selectStudent);
+*/
+/*
+// Reduce
+// Explain reduce of an array with example
+const numbers = [1, 2, 3, 4, 5, 6, 7];
+const total = numbers.reduce((sum, num) => {
+    return sum += num;
+}, 0)
+console.log('sum : ', total);
+
+const person = [
+    { name: 'tasib', age: 19, marks: 70 },
+    { name: 'rafi', age: 19, marks: 80 },
+    { name: 'rakib', age: 19, marks: 60 }
+]
+const totalMarks = person.reduce((sum, mark) => {
+    return sum += mark.marks;
+}, 0)
+console.log('Total Marks : ', totalMarks);
 */
