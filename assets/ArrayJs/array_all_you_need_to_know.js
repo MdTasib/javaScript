@@ -256,7 +256,8 @@ console.table(students);
 console.table(selectStudent);
 */
 /*
-// Reduce
+// Reduce *****************
+
 // Explain reduce of an array with example
 const numbers = [1, 2, 3, 4, 5, 6, 7];
 const total = numbers.reduce((sum, num) => {
@@ -273,4 +274,34 @@ const totalMarks = person.reduce((sum, mark) => {
     return sum += mark.marks;
 }, 0)
 console.log('Total Marks : ', totalMarks);
+
+/*
+// Array flat method
+const nestedArray = [[1, 2], 3, [4, 5]];
+
+const flatArray = nestedArray.flat();
+console.log('Flat use : ', flatArray);
+
+const reduceArray = nestedArray.reduce((acc, curr) => {
+    return acc.concat(curr)
+}, [])
+console.log('Reduce use flat arr : ', reduceArray);
+
+// Array flatMap method
+const arr = [1, 2, 3, 4, 5, 6];
+
+// map
+const map = arr.map(a => [a * 2]).flat();
+console.log('map : ', map)
+
+// flatMap
+const flatMap = arr.flatMap(a => a * 2);
+console.log('flatMap : ', flatMap);
+
+// reduce use faltMap
+const reduceFlatMap = arr.reduce((acc, curr) => {
+    return acc.concat(curr * 2)
+}, [])
+console.log('reduceFaltMap : ', reduceFlatMap);
 */
+* /
