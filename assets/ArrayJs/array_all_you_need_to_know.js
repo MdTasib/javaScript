@@ -304,4 +304,26 @@ const reduceFlatMap = arr.reduce((acc, curr) => {
 }, [])
 console.log('reduceFaltMap : ', reduceFlatMap);
 */
-* /
+
+/*
+// Example Frequency Checker
+const votes = [
+    'javascript',
+    'python',
+    'react',
+    'javascript',
+    'react',
+    'python',
+    'javascript'
+];
+
+const result = votes.reduce((acc, cur) => {
+    if (acc[cur]) {
+        acc[cur]++
+    } else {
+        acc[cur] = 1
+    }
+    return acc
+}, {})
+console.table(result);
+*/
