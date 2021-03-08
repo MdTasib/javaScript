@@ -407,4 +407,50 @@ const resultF = matrix.reduce((acc, cur) => {
     return acc + cur.reduce((a, b) => a + b);
 }, 0)
 console.log(resultF);
+
+
+// Map and Filter using Reduce
+
+// map
+const arr = [1, 2, 3, 4, 5, 6];
+const arr1 = arr.reduce((acc, cur) => {
+    acc.push(cur * cur)
+    return acc
+}, [])
+
+console.log(arr1);
+
+// Filter
+const num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const evenNum = num.reduce((acc, cur) => {
+    if (cur % 2 === 1) {
+        acc.push(cur)
+    }
+    return acc
+}, [])
+
+console.log(evenNum);
+
+//  ********* //
+// big array
+let bigArray = [];
+for (let i = 0; i < 5000000; i++) {
+    bigArray.push(i)
+}
+
+// map and filter Chain --> Efficiency
+console.time('Both')
+bigArray.filter(v => v % 2 === 0).map(v => v * 2);
+console.timeEnd('Both')
+
+// map and filter Reduce --> Efficiency
+console.time('Reduce');
+bigArray.reduce((acc, cur) => {
+    if (cur % 2 === 0) {
+        acc.push(cur * 2)
+    }
+    return acc
+}, [])
+
+console.timeEnd('Reduce')
 */
